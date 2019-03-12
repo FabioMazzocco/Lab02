@@ -40,19 +40,28 @@ public class AlienController {
     private Button btnAddWord;
 
     @FXML
-    void doAddWord(ActionEvent event) {
-    	
-    	String word = txtNewWord.getText();
+    void doAddWord(ActionEvent event) throws Exception {
+    	txtArea.clear();
+    	String word = txtNewWord.getText().trim();
     	if(!word.contains(" ")) {
     		txtArea.appendText("Formato errato");
     		return;
     	}
-    	
+    	String translation = word.substring(word.indexOf(" ")+1).trim();
+    	word = word.substring(0, word.indexOf(" ")).trim();
+    	try{
+    		model.addWord(word, translation);
+    	}catch(Exception e) {
+    		e.printStackTrace();
+    	}
+    	txtArea.appendText("Aggiunta '"+word+"' con traduzione '"+translation+"'\n");
+    	txtNewWord.clear();
     }
 
     @FXML
     void doTranslate(ActionEvent event) {
-
+    	String word = txtTranslation.getText().trim();
+    	txtTranslation.clear();
     }
 
     @FXML

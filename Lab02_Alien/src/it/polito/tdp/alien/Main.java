@@ -7,15 +7,16 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 
-
-
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
+		
 		AlienModel model;
 		FXMLLoader loader;
 		AlienController controller;
+		
 		try {
+			
 			loader = new FXMLLoader(getClass().getResource("Alien.fxml"));
 			model = new AlienModel();
 			
@@ -29,6 +30,7 @@ public class Main extends Application {
 			
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

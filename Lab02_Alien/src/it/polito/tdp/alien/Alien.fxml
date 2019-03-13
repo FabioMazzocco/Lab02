@@ -29,15 +29,15 @@
          <children>
             <HBox>
                <children>
-                  <Label text="Text to be translated" />
-                  <TextField fx:id="txtTranslation">
+                  <Label text="Alien Text" />
+                  <TextField fx:id="txtTranslation" promptText="Insert Alien text here">
                      <HBox.margin>
-                        <Insets left="70.0" />
+                        <Insets left="125.0" />
                      </HBox.margin>
                   </TextField>
                   <Button fx:id="btnTranslate" mnemonicParsing="false" onAction="#doTranslate" text="Translate">
                      <HBox.margin>
-                        <Insets left="90.0" />
+                        <Insets left="100.0" />
                      </HBox.margin>
                   </Button>
                </children>
@@ -50,28 +50,11 @@
                   <Insets top="20.0" />
                </VBox.margin>
             </TextArea>
-            <HBox>
-               <children>
-                  <Label text="Insert word&amp;translation">
-                     <HBox.margin>
-                        <Insets bottom="20.0" />
-                     </HBox.margin>
-                  </Label>
-                  <TextField fx:id="txtNewWord">
-                     <HBox.margin>
-                        <Insets left="55.0" />
-                     </HBox.margin>
-                  </TextField>
-                  <Button fx:id="btnAddWord" mnemonicParsing="false" onAction="#doAddWord" text="Add word">
-                     <HBox.margin>
-                        <Insets left="90.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
+            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#doClear" text="Clear Text">
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets left="420.0" top="15.0" />
                </VBox.margin>
-            </HBox>
+            </Button>
          </children>
       </VBox>
    </center>
